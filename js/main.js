@@ -34,9 +34,10 @@ var mattTime = function() {
 		$("#hours").hide();
 	}
 	var nowTenHours = Math.floor((nowHours-nowSingleHours)/10);
-	if ((nowSeconds == 0)&&(nowTenSeconds == 0)&&(nowMinutes == 0)&&(nowTenMinutes == 0)&&(nowHours == 0)) {
+	if (((nowSeconds == 0)&&(nowTenSeconds == 0)&&(nowMinutes == 0)&&(nowTenMinutes == 0)&&(nowHours == 0)) || (nowTenHours == 0)) {
 		$("#tenHours").hide();
 	}
+
 	document.getElementById("seconds").style.background =
 	 "url(img/clock_numbers.jpg) " + clockNumbers[nowSeconds];
 	document.getElementById("seconds").style.backgroundSize =
